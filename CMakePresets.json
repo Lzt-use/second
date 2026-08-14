@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "msvc2022_64",
+      "displayName": "MSVC 2026 x64 (Qt 6.11.0)",
+      "description": "使用 VS2026 编译，Qt 6.11.0 msvc2022_64",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/vs2026",
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "cl.exe",
+        "CMAKE_CXX_COMPILER": "cl.exe",
+        "CMAKE_PREFIX_PATH": "D:/Qt/6.11.0/msvc2022_64"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "msvc2022_64",
+      "displayName": "Build (Release)",
+      "configurePreset": "msvc2022_64",
+      "configuration": "Release"
+    },
+    {
+      "name": "msvc2022_64-debug",
+      "displayName": "Build (Debug)",
+      "configurePreset": "msvc2022_64",
+      "configuration": "Debug"
+    }
+  ]
+}
